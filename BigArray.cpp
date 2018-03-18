@@ -6,8 +6,13 @@
 
 #include <random>
 
+
+BigArray::BigArray() {
+    makeBigArray(1000);
+    readFile();
+}
+
 void BigArray::readFile() {
-    getSize();
     int test;
     ifstream ofile;
     int array[10];
@@ -41,24 +46,33 @@ int BigArray::getSize() {
     // An error occurred
 }
 
-BigArray::BigArray() {
-    ofstream ofile(dirLocation.c_str(),ios::binary | ios::out);
-    int data [1000];
-    for (int i; i<1000; i++){
-        data[i] = i+1;
-    };
-    int size   =  sizeof(data)/sizeof(data[0]);
 
-    shuffle(data, data + size, std::mt19937(std::random_device()()));
+bool BigArray::exists(string & name) {
+    struct stat buffer;
+    return (stat (name.c_str(), &buffer) == 0);
+}
 
-    for(int loop = 0; loop < size; ++loop) {
-        //cout << data[loop] << endl;
-        ofile.write(reinterpret_cast<char *>(&data[loop]), sizeof(int));
+void BigArray::makeBigArray(int cant) {
+    sizeOfArray = cant;
+    if (!exists(dirLocation)) {
+        ofstream ofile(dirLocation.c_str(), ios::binary | ios::out);
+
+        int data[cant];
+        for (int i; i < cant; i++) {
+            data[i] = i + 1;
+        };
+        int size = sizeof(data) / sizeof(data[0]);
+
+        shuffle(data, data + size, std::mt19937(std::random_device()()));
+
+        for (int loop = 0; loop < size; ++loop) {
+            ofile.write(reinterpret_cast<char *>(&data[loop]), sizeof(int));
+        }
+
+        ofile.close();
     }
-    /*
-    for (int x=1; x<=10;x++ ) {
-        ofile.write(reinterpret_cast<char *>(&x), sizeof(int));
-    }*/
-    ofile.close();
-    readFile();
+}
+
+int &BigArray::operator[](int x) {
+    return <#initializer#>;
 }

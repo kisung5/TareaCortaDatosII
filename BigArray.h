@@ -15,18 +15,21 @@ using namespace std;
 
 class BigArray {
 private:
-    static const int maxSize = 100;
+    int sizeOfArray;
+    const int maxSize = 100;
     int * leftPage[maxSize];
     int * rightPage[maxSize];
     int * midPage[maxSize];
+    string dirLocation = ("./BigArray.bin");
     int getSize();
     void readFile();
     void writeFile();
-    string dirLocation = ("./BigArray.bin");
+    inline bool exists(string& name);
+    void makeBigArray(int cant);
 
 public:
     BigArray();
-
+    inline int& operator[] (int x);
 };
 
 
