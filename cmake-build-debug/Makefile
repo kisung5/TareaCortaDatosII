@@ -123,32 +123,32 @@ TareaCortaDatosII/fast:
 	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/build
 .PHONY : TareaCortaDatosII/fast
 
-BigList.o: BigList.cpp.o
+BigArray.o: BigArray.cpp.o
 
-.PHONY : BigList.o
+.PHONY : BigArray.o
 
 # target to build an object file
-BigList.cpp.o:
-	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o
-.PHONY : BigList.cpp.o
+BigArray.cpp.o:
+	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o
+.PHONY : BigArray.cpp.o
 
-BigList.i: BigList.cpp.i
+BigArray.i: BigArray.cpp.i
 
-.PHONY : BigList.i
+.PHONY : BigArray.i
 
 # target to preprocess a source file
-BigList.cpp.i:
-	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.i
-.PHONY : BigList.cpp.i
+BigArray.cpp.i:
+	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.i
+.PHONY : BigArray.cpp.i
 
-BigList.s: BigList.cpp.s
+BigArray.s: BigArray.cpp.s
 
-.PHONY : BigList.s
+.PHONY : BigArray.s
 
 # target to generate assembly for a file
-BigList.cpp.s:
-	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.s
-.PHONY : BigList.cpp.s
+BigArray.cpp.s:
+	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.s
+.PHONY : BigArray.cpp.s
 
 main.o: main.cpp.o
 
@@ -213,9 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TareaCortaDatosII"
-	@echo "... BigList.o"
-	@echo "... BigList.i"
-	@echo "... BigList.s"
+	@echo "... BigArray.o"
+	@echo "... BigArray.i"
+	@echo "... BigArray.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

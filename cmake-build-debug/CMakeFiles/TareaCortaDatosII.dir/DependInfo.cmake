@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kisung/CLionProjects/TareaCortaDatosII/BigList.cpp" "/home/kisung/CLionProjects/TareaCortaDatosII/cmake-build-debug/CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o"
+  "/home/kisung/CLionProjects/TareaCortaDatosII/BigArray.cpp" "/home/kisung/CLionProjects/TareaCortaDatosII/cmake-build-debug/CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o"
   "/home/kisung/CLionProjects/TareaCortaDatosII/main.cpp" "/home/kisung/CLionProjects/TareaCortaDatosII/cmake-build-debug/CMakeFiles/TareaCortaDatosII.dir/main.cpp.o"
   "/home/kisung/CLionProjects/TareaCortaDatosII/quickSort.cpp" "/home/kisung/CLionProjects/TareaCortaDatosII/cmake-build-debug/CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o"
   )

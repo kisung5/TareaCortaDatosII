@@ -6,9 +6,7 @@
 #include "quickSort.h"
 
 int main() {
-/*
-    binmanager->makeBigList();
-    binmanager->readFile();
+    BigArray *binmanager = new BigArray();
     /*int array [] = {5,3,8,0,1,45,2};
     quickSort quickSort1;
     quickSort1.quicksort(array,0,6);*/

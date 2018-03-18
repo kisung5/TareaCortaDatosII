@@ -9,6 +9,7 @@
 #include <fstream>
 #include <sys/stat.h>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -18,11 +19,11 @@ private:
     int * leftPage[maxSize];
     int * rightPage[maxSize];
     int * midPage[maxSize];
-    char buffer[100];
-    const string dirLocation = "/BigArray/BigArray.bin";
     int getSize();
     void readFile();
     void writeFile();
+    string dirLocation = ("./BigArray.bin");
+
 public:
     BigArray();
 

@@ -6,21 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/kisung/CLionProjects/TareaCortaDatosII/BigList.cpp
-BigList.h
-/home/kisung/CLionProjects/TareaCortaDatosII/BigList.h
+/home/kisung/CLionProjects/TareaCortaDatosII/BigArray.cpp
+BigArray.h
+/home/kisung/CLionProjects/TareaCortaDatosII/BigArray.h
+random
+-
 
-/home/kisung/CLionProjects/TareaCortaDatosII/BigList.h
+/home/kisung/CLionProjects/TareaCortaDatosII/BigArray.h
 iostream
 -
 fstream
 -
 sys/stat.h
 -
+string
+-
+algorithm
+-
 
 /home/kisung/CLionProjects/TareaCortaDatosII/main.cpp
-BigList.h
-/home/kisung/CLionProjects/TareaCortaDatosII/BigList.h
+BigArray.h
+/home/kisung/CLionProjects/TareaCortaDatosII/BigArray.h
 quickSort.h
 /home/kisung/CLionProjects/TareaCortaDatosII/quickSort.h
 

@@ -81,28 +81,28 @@ CMakeFiles/TareaCortaDatosII.dir/main.cpp.o.provides: CMakeFiles/TareaCortaDatos
 CMakeFiles/TareaCortaDatosII.dir/main.cpp.o.provides.build: CMakeFiles/TareaCortaDatosII.dir/main.cpp.o
 
 
-CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o: CMakeFiles/TareaCortaDatosII.dir/flags.make
-CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o: ../BigList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kisung/CLionProjects/TareaCortaDatosII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o -c /home/kisung/CLionProjects/TareaCortaDatosII/BigList.cpp
+CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o: CMakeFiles/TareaCortaDatosII.dir/flags.make
+CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o: ../BigArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kisung/CLionProjects/TareaCortaDatosII/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o -c /home/kisung/CLionProjects/TareaCortaDatosII/BigArray.cpp
 
-CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kisung/CLionProjects/TareaCortaDatosII/BigList.cpp > CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.i
+CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kisung/CLionProjects/TareaCortaDatosII/BigArray.cpp > CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.i
 
-CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kisung/CLionProjects/TareaCortaDatosII/BigList.cpp -o CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.s
+CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kisung/CLionProjects/TareaCortaDatosII/BigArray.cpp -o CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.s
 
-CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o.requires:
+CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o.requires:
 
-.PHONY : CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o.requires
+.PHONY : CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o.requires
 
-CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o.provides: CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o.requires
-	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o.provides.build
-.PHONY : CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o.provides
+CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o.provides: CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o.requires
+	$(MAKE) -f CMakeFiles/TareaCortaDatosII.dir/build.make CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o.provides.build
+.PHONY : CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o.provides
 
-CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o.provides.build: CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o
+CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o.provides.build: CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o
 
 
 CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o: CMakeFiles/TareaCortaDatosII.dir/flags.make
@@ -132,14 +132,14 @@ CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o.provides.build: CMakeFiles/Tare
 # Object files for target TareaCortaDatosII
 TareaCortaDatosII_OBJECTS = \
 "CMakeFiles/TareaCortaDatosII.dir/main.cpp.o" \
-"CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o" \
+"CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o" \
 "CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o"
 
 # External object files for target TareaCortaDatosII
 TareaCortaDatosII_EXTERNAL_OBJECTS =
 
 TareaCortaDatosII: CMakeFiles/TareaCortaDatosII.dir/main.cpp.o
-TareaCortaDatosII: CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o
+TareaCortaDatosII: CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o
 TareaCortaDatosII: CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o
 TareaCortaDatosII: CMakeFiles/TareaCortaDatosII.dir/build.make
 TareaCortaDatosII: CMakeFiles/TareaCortaDatosII.dir/link.txt
@@ -152,7 +152,7 @@ CMakeFiles/TareaCortaDatosII.dir/build: TareaCortaDatosII
 .PHONY : CMakeFiles/TareaCortaDatosII.dir/build
 
 CMakeFiles/TareaCortaDatosII.dir/requires: CMakeFiles/TareaCortaDatosII.dir/main.cpp.o.requires
-CMakeFiles/TareaCortaDatosII.dir/requires: CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o.requires
+CMakeFiles/TareaCortaDatosII.dir/requires: CMakeFiles/TareaCortaDatosII.dir/BigArray.cpp.o.requires
 CMakeFiles/TareaCortaDatosII.dir/requires: CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o.requires
 
 .PHONY : CMakeFiles/TareaCortaDatosII.dir/requires
