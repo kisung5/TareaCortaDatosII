@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kisung/CLionProjects/TareaCortaDatosII/BigList.cpp
+BigList.h
+/home/kisung/CLionProjects/TareaCortaDatosII/BigList.h
+
+/home/kisung/CLionProjects/TareaCortaDatosII/BigList.h
+iostream
+-
+fstream
+-
+sys/stat.h
+-
+
+/home/kisung/CLionProjects/TareaCortaDatosII/main.cpp
+BigList.h
+/home/kisung/CLionProjects/TareaCortaDatosII/BigList.h
+quickSort.h
+/home/kisung/CLionProjects/TareaCortaDatosII/quickSort.h
+
+/home/kisung/CLionProjects/TareaCortaDatosII/quickSort.cpp
+quickSort.h
+/home/kisung/CLionProjects/TareaCortaDatosII/quickSort.h
+
+/home/kisung/CLionProjects/TareaCortaDatosII/quickSort.h
+

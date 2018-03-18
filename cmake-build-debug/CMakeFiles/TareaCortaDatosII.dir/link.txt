@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TareaCortaDatosII.dir/main.cpp.o CMakeFiles/TareaCortaDatosII.dir/BigList.cpp.o CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o  -o TareaCortaDatosII 
