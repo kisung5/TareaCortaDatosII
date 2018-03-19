@@ -10,26 +10,29 @@
 #include <sys/stat.h>
 #include <string>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
 class BigArray {
 private:
     int sizeOfArray;
-    const int maxSize = 100;
-    int * leftPage[maxSize];
-    int * rightPage[maxSize];
-    int * midPage[maxSize];
+    static const int maxSize = 100;
+    int leftPage[maxSize];
+    int rightPage[maxSize];
+    int midPage[maxSize];
+    int pages;
+    int loaded[3];
     string dirLocation = ("./BigArray.bin");
     int getSize();
-    void readFile();
+    void readFile(int array[maxSize], int ini);
     void writeFile();
     inline bool exists(string& name);
     void makeBigArray(int cant);
 
 public:
     BigArray();
-    inline int& operator[] (int x);
+    int& operator [] (int x);
 };
 
 

@@ -7,6 +7,9 @@
 
 int main() {
     BigArray *binmanager = new BigArray();
+    cout<<(*binmanager)[1]<<endl;
+    cout<<(*binmanager)[500]<<endl;
+    cout<<(*binmanager)[856]<<endl;
     /*int array [] = {5,3,8,0,1,45,2};
     quickSort quickSort1;
     quickSort1.quicksort(array,0,6);*/

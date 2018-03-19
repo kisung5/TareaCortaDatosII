@@ -23,6 +23,8 @@ string
 -
 algorithm
 -
+cmath
+-
 
 /home/kisung/CLionProjects/TareaCortaDatosII/main.cpp
 BigArray.h

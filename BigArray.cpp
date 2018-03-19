@@ -9,22 +9,21 @@
 
 BigArray::BigArray() {
     makeBigArray(1000);
-    readFile();
 }
 
-void BigArray::readFile() {
+void BigArray::readFile(int array[maxSize], int ini) {
     int test;
     ifstream ofile;
-    int array[10];
     ofile.open(dirLocation.c_str(), ios::in | ios::binary);
-    for (int x=1; x<=10;x++ ) {
+    ofile.seekg(ini*sizeof(int));
+    for (int x=0; x<maxSize;x++ ) {
         ofile.read(reinterpret_cast<char*>(&test), sizeof(int));
-        array[x-1] = test;
+        array[x] = test;
     }
-    cout<<ofile.gcount()<<endl;
-    for (int x=1; x<=10;x++ ) {
-        cout << array[x - 1] << "-";
-    }
+
+    /*for (int x=1; x<=10;x++ ) {
+        cout << *array[x - 1] << "-";
+    }*/
     ofile.close();
 }
 
@@ -54,6 +53,7 @@ bool BigArray::exists(string & name) {
 
 void BigArray::makeBigArray(int cant) {
     sizeOfArray = cant;
+    pages = (int)lround(sizeOfArray/maxSize+0.5f);
     if (!exists(dirLocation)) {
         ofstream ofile(dirLocation.c_str(), ios::binary | ios::out);
 
@@ -74,5 +74,39 @@ void BigArray::makeBigArray(int cant) {
 }
 
 int &BigArray::operator[](int x) {
-    return <#initializer#>;
+    if (x > sizeOfArray-1) {
+        cout<<"El indice esta fuera del rango."<<endl;
+        int *num = new int(0);
+        return *num;
+    } else {
+        for (int i=1;i<pages;i++){
+            if (x>=(i-1)*maxSize & x<maxSize*(i)){
+                if (loaded[0] == i){
+                   return leftPage[x];
+                } else if(loaded[1] == i) {
+                    return midPage[x];
+                } else if(loaded[2] == i) {
+                    return rightPage[x];
+                } else {
+                    if (i<pages/3) {
+                        readFile(leftPage,i*maxSize);
+                        loaded[0] = i;
+                        return leftPage[x];
+                    } else if (i>pages*2/3) {
+                        readFile(rightPage,i*maxSize);
+                        loaded[2] = i;
+                        return rightPage[x];
+                    } else {
+                        readFile(midPage,i*maxSize);
+                        loaded[1] = i;
+                        return midPage[x];
+                    }
+                }
+            } else if (x == sizeOfArray-1) {
+                if (loaded[2] == pages){
+                    return rightPage[x];
+                }
+            }
+        }
+    }
 }
