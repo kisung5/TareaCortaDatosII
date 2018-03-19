@@ -11,7 +11,11 @@ BigArray::BigArray() {
     makeBigArray(1000);
 }
 
-void BigArray::readFile(int array[maxSize], int ini) {
+BigArray::~BigArray() {
+
+}
+
+void BigArray::readFile(int array[], int ini) {
     int test;
     ifstream ofile;
     ofile.open(dirLocation.c_str(), ios::in | ios::binary);
@@ -27,8 +31,17 @@ void BigArray::readFile(int array[maxSize], int ini) {
     ofile.close();
 }
 
-void BigArray::writeFile() {
-
+void BigArray::writeFile(int array[],int pos) {
+    ofstream ofile;
+    ofile.open(dirLocation.c_str(), ios::binary | ios::out);
+    ofile.seekp(pos*sizeof(int));
+    int num;
+    for (int loop = 0; loop < maxSize; ++loop) {
+        num = array[loop];
+        ofile.write(reinterpret_cast<char *>(&num), sizeof(int));
+    }
+    ofile.close();
+    cout<<"cambio generado"<<endl;
 }
 
 int BigArray::getSize() {
@@ -54,8 +67,9 @@ bool BigArray::exists(string & name) {
 void BigArray::makeBigArray(int cant) {
     sizeOfArray = cant;
     pages = (int)lround(sizeOfArray/maxSize+0.5f);
-    if (!exists(dirLocation)) {
+    //if (!exists(dirLocation)) {
         ofstream ofile(dirLocation.c_str(), ios::binary | ios::out);
+        ofile.clear();
 
         int data[cant];
         for (int i; i < cant; i++) {
@@ -70,14 +84,12 @@ void BigArray::makeBigArray(int cant) {
         }
 
         ofile.close();
-    }
+    //}
 }
 
 int &BigArray::operator[](int x) {
     if (x > sizeOfArray-1) {
         cout<<"El indice esta fuera del rango."<<endl;
-        int *num = new int(0);
-        return *num;
     } else {
         for (int i=1;i<pages;i++){
             if (x>=(i-1)*maxSize & x<maxSize*(i)){
@@ -89,24 +101,49 @@ int &BigArray::operator[](int x) {
                     return rightPage[x];
                 } else {
                     if (i<pages/3) {
+                        if (leftIn){
+                            writeFile(leftPage,(loaded[0]-1)*maxSize);
+                        }
                         readFile(leftPage,i*maxSize);
                         loaded[0] = i;
+                        cout<<"cambio de pagina"<<endl;
+                        leftIn = true;
                         return leftPage[x];
                     } else if (i>pages*2/3) {
+                        if (rightIn){
+                            writeFile(rightPage,(loaded[2]-1)*maxSize);
+                        }
                         readFile(rightPage,i*maxSize);
                         loaded[2] = i;
+                        cout<<"cambio de pagina"<<endl;
+                        rightIn = true;
                         return rightPage[x];
                     } else {
+                        if (midIn){
+                            writeFile(midPage,(loaded[1]-1)*maxSize);
+                        }
                         readFile(midPage,i*maxSize);
                         loaded[1] = i;
+                        cout<<"cambio de pagina"<<endl;
+                        midIn = true;
                         return midPage[x];
                     }
                 }
             } else if (x == sizeOfArray-1) {
                 if (loaded[2] == pages){
                     return rightPage[x];
+                } else {
+                    if (rightIn){
+                        writeFile(rightPage,(loaded[2]-1)*maxSize);
+                    }
+                    readFile(rightPage,i*maxSize);
+                    loaded[2] = i;
+                    cout<<"cambio de pagina"<<endl;
+                    rightIn = true;
+                    return rightPage[x];
                 }
             }
         }
     }
 }
+
