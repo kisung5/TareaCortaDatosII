@@ -7,16 +7,17 @@
 
 int main() {
     BigArray *binmanager = new BigArray();
-    cout<<endl;
-    int num;
+
+    int n = 4000/sizeof((*binmanager)[0]);
+    quickSort quickSort1;
+    quickSort1.quicksort(binmanager,0,n-1);
+
+    /*int num;
     int counter;
     while(counter < 100) {
         cin >> num;
         cout << (*binmanager)[num] << endl;
         counter++;
-    }
-    /*int array [] = {5,3,8,0,1,45,2};
-    quickSort quickSort1;
-    quickSort1.quicksort(array,0,6);*/
+    }*/
     return 0;
 }

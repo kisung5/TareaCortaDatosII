@@ -8,6 +8,7 @@ CMakeFiles/TareaCortaDatosII.dir/main.cpp.o: ../BigArray.h
 CMakeFiles/TareaCortaDatosII.dir/main.cpp.o: ../main.cpp
 CMakeFiles/TareaCortaDatosII.dir/main.cpp.o: ../quickSort.h
 
+CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o: ../BigArray.h
 CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o: ../quickSort.cpp
 CMakeFiles/TareaCortaDatosII.dir/quickSort.cpp.o: ../quickSort.h
 

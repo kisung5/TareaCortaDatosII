@@ -23,7 +23,7 @@ void BigArray::readFile(int array[], int ini) {
     }
     for (int x=0; x<maxSize;x++ ) {
         ofile.read(reinterpret_cast<char*>(&test), sizeof(int));
-        cout<< test << "-";
+//        cout<< test << "-";
         array[x] = test;
     }
     cout<< endl;
@@ -39,7 +39,7 @@ void BigArray::writeFile(int array[],int pos) {
         ofile.write(reinterpret_cast<char *>(&num), sizeof(int));
     }
     ofile.close();
-    cout<<"pagina guardada"<<endl;
+//    cout<<"pagina guardada"<<endl;
 }
 
 int BigArray::getSize() {
@@ -78,7 +78,7 @@ void BigArray::makeBigArray(int cant) {
 
         for (int loop = 0; loop < size; ++loop) {
             ofile.write(reinterpret_cast<char *>(&data[loop]), 4);
-            cout<< data[loop] << "-";
+            //cout<< data[loop] << "-";
         }
 
         ofile.close();
@@ -88,6 +88,8 @@ void BigArray::makeBigArray(int cant) {
 int &BigArray::operator[](int x) {
     if (x > sizeOfArray-1) {
         cout<<"El indice esta fuera del rango."<<endl;
+        int *num = new int(0);
+        return *num;
     } else {
         for (int i=0;i<pages;i++){
             if (x>=(i)*maxSize & x<maxSize*(i+1)){
@@ -104,7 +106,7 @@ int &BigArray::operator[](int x) {
                         }
                         readFile(leftPage,i*maxSize);
                         loaded[0] = i+1;
-                        cout<<"cambio de pagina"<<endl;
+//                        cout<<"cambio de pagina"<<endl;
                         leftIn = true;
                         return leftPage[x-i*maxSize];
                     } else if (i>pages*2/3) {
@@ -113,7 +115,7 @@ int &BigArray::operator[](int x) {
                         }
                         readFile(rightPage,i*maxSize);
                         loaded[2] = i+1;
-                        cout<<"cambio de pagina"<<endl;
+//                        cout<<"cambio de pagina"<<endl;
                         rightIn = true;
                         return rightPage[x-i*maxSize];
                     } else {
@@ -122,7 +124,7 @@ int &BigArray::operator[](int x) {
                         }
                         readFile(midPage,i*maxSize);
                         loaded[1] = i+1;
-                        cout<<"cambio de pagina"<<endl;
+//                        cout<<"cambio de pagina"<<endl;
                         midIn = true;
                         return midPage[x-i*maxSize];
                     }

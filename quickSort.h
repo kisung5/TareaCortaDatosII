@@ -6,12 +6,16 @@
 #define TAREACORTADATOSII_QUICKSORT_H
 
 
+#include "BigArray.h"
+
 class quickSort {
 private:
     int divide(int *array,int start, int end);
+    int divide(BigArray *array,int start, int end);
 
 public:
     void quicksort(int *array, int start, int end);
+    void quicksort(BigArray *array, int start, int end);
 
 };
 
