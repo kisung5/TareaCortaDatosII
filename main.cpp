@@ -8,9 +8,6 @@
 int main() {
     BigArray *binmanager = new BigArray();
     cout<<endl;
-    cout<<(*binmanager)[0]<<endl;
-    cout<<(*binmanager)[100]<<endl;
-    cout<<(*binmanager)[200]<<endl;
     int num;
     int counter;
     while(counter < 100) {
