@@ -12,7 +12,15 @@ BigArray::BigArray() {
 }
 
 BigArray::~BigArray() {
-
+    if (leftIn){
+        writeFile(leftPage,(loaded[0]-1)*maxSize);
+    }
+    if (rightIn){
+        writeFile(rightPage,(loaded[2]-1)*maxSize);
+    }
+    if (midIn){
+        writeFile(midPage,(loaded[1]-1)*maxSize);
+    }
 }
 
 void BigArray::readFile(int array[], int ini) {
