@@ -19,12 +19,12 @@ int main() {
 ///------<
 
 ///----->Descomente esta linea de codigo para imprimir el array completo.
-//    int i = 0;
-//    while(i<1000){
-//        cout<<(*binmanager)[i]<<"-";
-//        i++;
-//    }
-//    cout<<endl;
+    int i = 0;
+    while(i<1000){
+        cout<<(*binmanager)[i]<<"-";
+        i++;
+    }
+    cout<<endl;
 ///------<
 
 /**
